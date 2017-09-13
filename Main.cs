@@ -178,13 +178,16 @@ namespace Test
                 }
             }
 
-      /*      IEnumerable<Student> wantedBy = schueler.Where(q => q.Plus.Contains(s.Name));
+            IEnumerable<Student> wantedBy = schueler.Where(q => q.Plus.Contains(s.Name));
             foreach (Student w in wantedBy)
             {
-                room = findRoomMate(w.Name, room);
-                if (room == null)
-                    return null;
-            } */
+                if (!room.Bewohner.Contains(w))
+                {
+                   // room = findRoomMate(w.Name, room);
+                    if (room == null)
+                        return null;
+                }
+            }
 
             return room;
  
