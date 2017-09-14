@@ -111,12 +111,14 @@ namespace Test
                             lines = lines[1].Split(' ');
                             foreach (var name in lines)
                             {
-                                s.Plus.Add(name.Trim());
+                            	if(name.Trim() != "")
+                            		s.Plus.Add(name.Trim());
                             }
                         }
                         else
                         {
-                            s.Plus.Add(lines[1].Trim());
+                        	if(lines[1].Trim() != "")
+                        		s.Plus.Add(lines[1].Trim());
                         }
 
                     }
@@ -135,12 +137,14 @@ namespace Test
                             lines = lines[1].Split(' ');
                             foreach (var name in lines)
                             {
-                                s.Minus.Add(name.Trim());
+                            	if(name.Trim() != "")
+                            		s.Minus.Add(name.Trim());
                             }
                         }
                         else
                         {
-                            s.Minus.Add(lines[1].Trim());
+                        	if(lines[1].Trim() != "")
+                            	s.Minus.Add(lines[1].Trim());
                         }
 
                     }
